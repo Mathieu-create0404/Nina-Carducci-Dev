@@ -67,10 +67,18 @@ body {
 	z-index: 0;
 }
 
+img.d-block.w-100 {
+    height: auto;
+}
+
 .picture img {
 	width: 100%;
-
 }
+
+#Nina-photo {
+    height: auto;
+}
+
 #about-me {
 	flex: 2
 }
@@ -190,10 +198,6 @@ body {
 	z-index: 1;
 }
 
-.service__price p {
-    font-size: 24px;
-}
-
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -215,6 +219,11 @@ body {
 	right: 0;
 	z-index: -1;
 }
+
+img#camera-photo {
+    height: auto;
+}
+
 .form-container {
 	flex : 2;
 
