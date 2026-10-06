@@ -117,7 +117,9 @@
       $(`#${lightboxId}`)
         .find(".lightboxImage")
         .attr("src", element.attr("src"));
-      $(`#${lightboxId}`).modal("toggle");
+      const modalElement = document.getElementById(lightboxId);
+      const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+      modal.toggle();
     },
     prevImage() {
       let activeImage = null;
@@ -210,7 +212,7 @@
                             <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
                             ${
                               navigation
-                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
+                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;">></div>'
                                 : '<span style="display:none;" />'
                             }
                         </div>
